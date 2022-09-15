@@ -135,5 +135,18 @@ my_name
 
 
 # Bang Methods 
+    # methods denoted with a ! mark at the end of the method name 
+    # bang methods perfom an action and simultaneously overwrite the value of the original object with 
+    # their result 
+
+    whisper = "GENERAL KENOBI!"
+
+    puts whisper.downcase! #=> "general kenobi!"
+    puts whisper #=> "general kenobi!"
+
+    # ^ that is the same as writing : 
+
+    whisper = whisper.downcase; 
+
 
 
