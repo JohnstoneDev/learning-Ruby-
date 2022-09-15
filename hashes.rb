@@ -89,8 +89,8 @@
     # Symbol Syntax 
         japanese_cars = {
             honda : 'Accord',
-            toyota : "Corolla",
-            nissan : "Altima"
+            toyota : 'Corolla',
+            nissan : 'Altima'
         }
 
     # Accessing object keys using symbols 
