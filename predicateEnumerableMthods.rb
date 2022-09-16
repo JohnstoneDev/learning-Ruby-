@@ -31,4 +31,3 @@
     fruits = ["apple", "banana", "strawberry", "pineapple"]
     fruits.none? { |fruit| fruit.length > 10 } #=> true 
     fruits.none? { |fruit| fruit.length > 6 } #=> false 
-    
