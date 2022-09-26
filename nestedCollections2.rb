@@ -57,5 +57,4 @@ vehicles[:dave] #=> { :year=>2021, :make=>"Ford", :model=>"Escape", :color=>"red
 vehicles.delete(:blake)
 
 # to delete one of the key / value pairs inside of a nested hash, you first specify the key of the hash
-vehuicles[:dave].delete(:color);
-
+vehicles[:dave].delete(:color);

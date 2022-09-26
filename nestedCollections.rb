@@ -93,14 +93,14 @@
 
     teacher_mailboxes.each_with_index do |element, element_index| 
         element.each_with_index do |inner_element, inner_index | 
-            puts "Element #{element_index} inner_element_index #{inner_index} inner_element #{inner_element} "
+            puts "Element #{element_index}, at index #{inner_index} is #{inner_element} "
         end 
     end 
 
     # Note : if we need only the teacher's name we can use #flatten before iterating 
 
     teacher_mailboxes.flatten.each do |teacher| 
-        puts "#{teacher is amazing!"
+        puts "#{teacher} is amazing!"
     end 
 
     # flatten gives us the nam of each teacher in the nested arrays into one array

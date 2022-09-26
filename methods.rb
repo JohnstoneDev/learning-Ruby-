@@ -118,7 +118,7 @@ my_name
         # return is the final output of a method that you can use in other places throghout the code 
 
 
-# Chaning methods 
+# Chaining methods 
     # Combining methods together in a line so that they evaluate one after the other 
     # each metho dcall builds off of the outcome of the previous methods in the chain.
 
