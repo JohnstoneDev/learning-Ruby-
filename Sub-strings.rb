@@ -8,4 +8,12 @@ def substrings(string,dictionary)
     return { string => qualified_entries.length }
 end
 
-puts(substrings("below",["below","down","go","going","horn","how","howdy","it","i","low","own","part","partner","sit"]))
+def layered_string(string,dictionary)
+   matched_strings = Hash.new(0)
+
+   dictionary.each do |word| 
+        passed = string.scan(word).length
+        matched_strings[word] = passed unless passed == 0 
+   end
+   return matched_strings
+end
