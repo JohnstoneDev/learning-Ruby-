@@ -143,3 +143,29 @@ class Message
       super
     end 
   end 
+
+  # Another Example : 
+
+  class Computer 
+    @@users = {} 
+    
+    def initialize(username,password)
+      @username = username 
+      @password = password
+      @files = {}
+      @@users[username] = password
+    end 
+    
+    def create filename
+      time = Time.now
+      @files[filename] = time
+      puts "#{@files[filename]} #{@username} #{time}" #=> Accessing instance variables inside the class
+    end
+  
+    def Computer.get_users
+      @@users
+    end 
+  end 
+  
+  my_computer = Computer.new("Giant PC","DinMando325")
+  
