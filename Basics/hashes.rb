@@ -88,9 +88,9 @@
 
     # Symbol Syntax 
         japanese_cars = {
-            honda : 'Accord',
-            toyota : 'Corolla',
-            nissan : 'Altima'
+            honda: 'Accord',
+            toyota: 'Corolla',
+            nissan: 'Altima'
         }
 
     # Accessing object keys using symbols 
@@ -98,3 +98,51 @@
     american_cars[:chevrolet];
     japanese_cars[:honda]
 ;
+
+
+# Manipulating a hash using symbols and some hash methods
+
+movies = { memento: 8 }
+
+puts "Query?"
+choice = gets.chomp.downcase
+
+case choice 
+when "add"
+    puts "Movie name"
+    title = gets.chomp
+    puts "Rating"
+    rating = gets.chomp
+    if !movies[:title]
+      movies.merge!(title.to_sym => rating.to_i)
+      puts movies
+      puts "#{title} rated #{rating} Added!"
+    else 
+      puts "#{title} is already in database!"
+    end 
+when "update"
+    puts "Movie name?"
+    title = gets.chomp.to_sym
+    if !movies[:title] 
+    puts "Oops! Movie is not in the database!"
+    else 
+    puts "Update rating"
+    rating = gets.chomp.to_i
+    movies[:title] = rating
+    end
+    puts "#{title} Updated!"
+when "display"
+  movies.each do |title,rating| 
+    puts "#{title} : #{rating}"
+  end 
+when "delete"
+  puts "Movie name?"
+  title = gets.chomp
+  if !movies[title.to_sym] 
+  puts "Not in the database!"
+  else
+  movies.delete(movies[title.to_sym])
+  puts "#{title} Deleted!"
+  end 
+else puts "Error!"
+end 
